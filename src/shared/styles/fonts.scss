@@ -1,0 +1,36 @@
+// В дизайне нет атомарных переменных, поэтому такие названия
+
+%b40 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+%r16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+%m16 {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 133.333% */
+}
+
+%m20 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+%font12 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
