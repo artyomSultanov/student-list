@@ -1,10 +1,11 @@
-import { Typography as AntdTypography, TypographyProps } from "antd";
+import "./styles.scss";
+
 import cn from "classnames";
 import { ComponentProps, FC } from "react";
 
 import { TColorType, TFontVariant } from "../../types/styles";
 
-type AntdTextProps = ComponentProps<Pick<TypographyProps, "Text">["Text"]>;
+type AntdTextProps = ComponentProps<"span">;
 interface ITypographyProps extends AntdTextProps {
   variant?: TFontVariant;
   color?: TColorType;
@@ -18,11 +19,11 @@ export const Typography: FC<ITypographyProps> = ({
   ...props
 }) => {
   return (
-    <AntdTypography.Text
+    <span
       className={cn(className, "typography", `typography_variant--${variant}`, `typography_color--${color}`)}
       {...props}
     >
       {children}
-    </AntdTypography.Text>
+    </span>
   );
 };

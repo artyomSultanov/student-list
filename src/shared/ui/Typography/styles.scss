@@ -1,6 +1,29 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
+
 .typography {
   &_variant {
+    &--b40 {
+      @extend %b40;
+    }
+    &--r16 {
+      @extend %r16;
+    }
+    &--m16 {
+      @extend %m16;
+    }
+    &--m20 {
+      @extend %m20;
+    }
+    &--font12 {
+      @extend %font12;
+    }
   }
   &_color {
+    @each $name, $color in $colors {
+      &--#{$name} {
+        color: $color;
+      }
+    }
   }
 }

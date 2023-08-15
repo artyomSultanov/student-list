@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react";
+import path from "path";
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 import svgr from "vite-plugin-svgr";
@@ -15,4 +16,14 @@ export default defineConfig({
       overlay: false,
     }),
   ],
+  resolve: {
+    alias: {
+      app: path.resolve(__dirname, "./src/app"),
+      entities: path.resolve(__dirname, "./src/entities"),
+      features: path.resolve(__dirname, "./src/features"),
+      pages: path.resolve(__dirname, "./src/pages"),
+      widgets: path.resolve(__dirname, "./src/widgets"),
+      shared: path.resolve(__dirname, "./src/shared"),
+    },
+  },
 });
